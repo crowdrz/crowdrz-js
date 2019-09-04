@@ -1,0 +1,23 @@
+{
+  "name": "crowdrz-js",
+  "version": "1.0.0",
+  "description": "Framework for social data",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "tslint --project \"./tsconfig.json\""
+  },
+  "author": "Antonin Bouscarel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "json2csv": "^4.5.2",
+    "ora": "^3.4.0",
+    "request": "^2.88.0"
+  }
+}
