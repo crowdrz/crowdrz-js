@@ -4,10 +4,11 @@
   "description": "Framework for social data",
   "main": "index.js",
   "scripts": {
-    "demo": "node ./demo/demo.js"
+    "demo": "node ./demo/demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Antonin Bouscarel",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.6.2"
   },
