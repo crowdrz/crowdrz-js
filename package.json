@@ -1,6 +1,6 @@
 {
   "name": "@crowdrz/crowdrz-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simplified wrapper for Social API",
   "repository": "crowdrz/crowdrz-js",
   "main": "./lib/crowdrz.js",
