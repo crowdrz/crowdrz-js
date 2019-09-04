@@ -6,12 +6,15 @@
   "main": "./lib/crowdrz.js",
   "scripts": {
     "demo": "node ./demo/demo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**/*.js"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.6.2"
+    "@types/node": "^12.6.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.2"
   },
   "dependencies": {
     "json2csv": "^4.5.2",
