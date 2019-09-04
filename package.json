@@ -1,5 +1,5 @@
 {
-  "name": "crowdrz-js",
+  "name": "@crowdrz/crowdrz-js",
   "version": "1.0.0",
   "description": "Framework for social data",
   "main": "index.js",
