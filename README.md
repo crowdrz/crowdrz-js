@@ -1,6 +1,6 @@
 # Crowdrz.js
 
-![npm](https://img.shields.io/npm/v/@crowdrz/crowdrz-js?style=for-the-badge)![CircleCI](https://img.shields.io/circleci/build/github/crowdrz/crowdrz-js/master?style=for-the-badge)![NPM](https://img.shields.io/npm/l/@crowdrz/crowdrz-js?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/@crowdrz/crowdrz-js)![CircleCI](https://img.shields.io/circleci/build/github/crowdrz/crowdrz-js/master)![NPM](https://img.shields.io/npm/l/@crowdrz/crowdrz-js)
 
 Simplified wrapper for social API.
 
