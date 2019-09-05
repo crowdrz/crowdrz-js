@@ -17,8 +17,9 @@ npm install --save @crowdrz/crowdrz-js
 ```javascript
 const Crowdrz = require('@crowdrz/crowdrz-js');
 
-let facebookWrapper = new Crowdrz('facebook', '<api key>');
-let comments = facebookWrapper.applyProcess('getComments', '<ressource id>');
+const crowdrz = new Crowdrz();
+crowdrz.addScope('facebook', '<api key>');
+let comments = crowdrz.facebook.getComments('<post id>');
 ```
 
 ## Test
