@@ -17,7 +17,7 @@
     "sinon": "^7.4.2"
   },
   "dependencies": {
-    "json2csv": "^4.5.2",
-    "request": "^2.88.0"
+    "fb": "^2.0.0",
+    "json2csv": "^4.5.2"
   }
 }
