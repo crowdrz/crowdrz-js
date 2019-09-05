@@ -28,12 +28,6 @@ let comments = crowdrz.facebook.getComments('<post id>');
 npm test
 ```
 
-## Todo
-
-- ~~Write first test~~
-- Document the code
-- Add store process to core (csv, bdd, json etc...)
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
