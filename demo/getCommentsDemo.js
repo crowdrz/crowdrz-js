@@ -1,4 +1,4 @@
-import Crowdrz from '../lib/crowdrz';
+const Crowdrz = require('../lib/crowdrz');
 
 const getCommentsDemo = function() {
   let crowdrz = new Crowdrz();
