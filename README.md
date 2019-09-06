@@ -6,7 +6,7 @@
   </a>
 -->
 
-  <h1 align="center">Crowdrz JS</h1>
+  <h3 align="center">Crowdrz JS</h3>
 
   <p align="center">
     Simplified wrapper for social APIs.
@@ -36,9 +36,6 @@
 * [License](#license)
 
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
