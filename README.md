@@ -33,6 +33,8 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+* [Available Methods](#available-methods)
+  * [Facebook](#facebook)
 * [Test](#test)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
