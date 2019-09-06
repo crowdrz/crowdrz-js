@@ -50,11 +50,17 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Install package with [npm](https://npmjs.com/).
+1. Install package with [npm](https://npmjs.com/) or [yarn](https://yarnpkg.com).
+
 ```bash
+# NPM
 npm install --save @crowdrz/crowdrz-js
+
+# Yarn
+yarn add @crowdrz/crowdrz-js
 ```
-3. include it in your code.
+
+2. include it in your code.
 ```javascript
 const Crowdrz = require('@crowdrz/crowdrz-js');
 ```
