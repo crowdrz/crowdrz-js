@@ -6,15 +6,20 @@
   "main": "./lib/crowdrz.js",
   "scripts": {
     "demo": "node ./demo/demo.js",
-    "test": "mocha test/**/*.js"
+    "test": "mocha test/**/*.js",
+    "build": "webpack --mode production"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
     "@types/node": "^12.6.2",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
-    "sinon": "^7.4.2"
+    "sinon": "^7.4.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   },
   "dependencies": {
     "fb": "^2.0.0",
