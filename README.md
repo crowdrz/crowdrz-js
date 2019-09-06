@@ -11,6 +11,9 @@
   <p align="center">
     Simplified wrapper for social APIs.
     <br />
+    <a href="https://github.com/crowdrz/crowdrz-js"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
     <a href="https://github.com/crowdrz/crowdrz-js/issues">Report Bug</a>
     ·
     <a href="https://github.com/crowdrz/crowdrz-js/issues">Request Feature</a>
