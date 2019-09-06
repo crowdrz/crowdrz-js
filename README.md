@@ -44,18 +44,18 @@
 
 This project uses [node](http://nodejs.org/) and [npm](https://npmjs.com/).
 * npm
-```sh
+```bash
 npm install npm@latest -g
 ```
 
 ### Installation
 
 1. Install package with [npm](https://npmjs.com/).
-```sh
+```bash
 npm install --save @crowdrz/crowdrz-js
 ```
 3. include it in your code.
-```sh
+```javascript
 const Crowdrz = require('@crowdrz/crowdrz-js');
 ```
 
@@ -66,8 +66,22 @@ const Crowdrz = require('@crowdrz/crowdrz-js');
 
 const crowdrz = new Crowdrz();
 crowdrz.addScope('facebook', '<api key>');
-let comments = crowdrz.facebook.getComments('<post id>');
+let comments = crowdrz.facebook.getComments('<post id>', 25);
 ```
+
+## Available Methods
+
+### Facebook
+
+#### getComments(postId, x)
+> Get x last comments for a facebook post. Set x at -1 to get all comments.
+> 
+> **Defaults:** `v4`
+
+```javascript
+let comments = crowdrz.facebook.getComments('<post id>', 25);
+```
+
 
 ## Test
 
