@@ -1,5 +1,4 @@
  <!-- PROJECT LOGO -->
-<br />
 <p align="center">
 <!--
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -7,7 +6,7 @@
   </a>
 -->
 
-  <h2 align="center">Crowdrz JS</h2>
+  <h1 align="center">Crowdrz JS</h1>
 
   <p align="center">
     Simplified wrapper for social APIs.
