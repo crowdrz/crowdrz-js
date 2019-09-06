@@ -1,12 +1,8 @@
  <!-- PROJECT LOGO -->
 <p align="center">
-<!--
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/crowdrz/crowdrz-js">
+    <img src="ressources/logo-js.png" alt="Logo" height="80">
   </a>
--->
-
-  <h3 align="center">Crowdrz JS</h3>
 
   <p align="center">
     Simplified wrapper for social APIs.
