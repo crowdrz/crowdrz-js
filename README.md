@@ -33,8 +33,6 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Available Methods](#available-methods)
-  * [Facebook](#facebook)
 * [Test](#test)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
@@ -70,20 +68,6 @@ const crowdrz = new Crowdrz();
 crowdrz.addScope('facebook', '<api key>');
 let comments = crowdrz.facebook.getComments('<post id>', 25);
 ```
-
-## Available Methods
-
-### Facebook
-
-#### getComments(postId, x)
-> Get x last comments for a facebook post. Set x at -1 to get all comments.
-> 
-> **Defaults:** `v4`
-
-```javascript
-let comments = crowdrz.facebook.getComments('<post id>', 25);
-```
-
 
 ## Test
 
