@@ -5,9 +5,10 @@
   "repository": "crowdrz/crowdrz-js",
   "main": "./lib/crowdrz.js",
   "scripts": {
-    "demo": "node ./demo/demo.js",
+    "demo": "node demo/demo.js",
     "test": "mocha test/**/*.js",
-    "build": "webpack --mode production"
+    "clean": "rm -r dist",
+    "build": "npm run clean && webpack --mode production"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "webpack-cli": "^3.3.8"
   },
   "dependencies": {
+    "async": "^3.1.0",
     "fb": "^2.0.0",
     "json2csv": "^4.5.2"
   }
