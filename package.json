@@ -8,7 +8,7 @@
     "demo": "node demo/demo.js",
     "test": "mocha test/**/*.js",
     "clean": "rm -r dist",
-    "build": "npm run clean && webpack --mode production"
+    "build": "webpack --mode production"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
