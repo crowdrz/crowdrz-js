@@ -1,8 +1,8 @@
-'use strict'
+import FB from 'fb'
 
-const FB = require('fb').default
+//const FB = require('fb').default
 
-const _checkParams = (request) => {
+const _checkParams = (request: any) => {
   if (!(request.apiToken && request.method && request.endpoint && request.apiVersion)) {
     return false
   }
@@ -51,6 +51,8 @@ const getData = async (request, _accumulator = [], totalLimit = null) => {
   }
 }
 
-module.exports = {
-  getData
-}
+export {getData}
+
+// module.exports = {
+//   getData
+// }

@@ -3,12 +3,12 @@
   "version": "2.1.0",
   "description": "Simplified wrapper for Social API",
   "repository": "crowdrz/crowdrz-js",
-  "main": "./lib/crowdrz.js",
+  "main": "./src/crowdrz.ts",
   "scripts": {
     "demo": "node demo/demo.js",
     "test": "mocha test/**/*.js",
     "clean": "rm -r dist",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,10 @@
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.1",
     "sinon": "^7.5.0",
-    "webpack": "^4.44.1",
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^8.2.0",
+    "typescript": "^4.3.5",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
