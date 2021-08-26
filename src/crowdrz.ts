@@ -1,4 +1,4 @@
-import {servicesList} from './services'
+import {servicesList, servicesListInterface} from './services'
 
 export interface CrowdrzRequest {
   method: string
@@ -7,7 +7,7 @@ export interface CrowdrzRequest {
 }
 
 interface CrowdrzInterface {
-  provider: string
+  provider: keyof servicesListInterface
   apiToken: string
   apiVersion: string
   debug: boolean
@@ -31,11 +31,11 @@ interface CrowdrzInterface {
   delete(endpoint: string, params: object): Promise<any>
 }
 
-class Crowdrz implements CrowdrzInterface {
+export class Crowdrz implements CrowdrzInterface {
   public debug: boolean
   public request: CrowdrzRequest
 
-  constructor(public provider: string, public apiToken: string, public apiVersion: string = '5.0') {
+  constructor(public provider: keyof servicesListInterface, public apiToken: string, public apiVersion: string = '5.0') {
     this._resetQuery()
     this.provider = provider
     this.apiToken = apiToken
@@ -54,7 +54,7 @@ class Crowdrz implements CrowdrzInterface {
   }
 
   // Setter
-  setProvider(provider: string): Crowdrz {
+  setProvider(provider: keyof servicesListInterface): Crowdrz {
     this.provider = provider
     return this
   }
@@ -138,7 +138,3 @@ class Crowdrz implements CrowdrzInterface {
     return await this.call('DELETE', endpoint, params)
   }
 }
-
-export {Crowdrz}
-
-//module.exports = Crowdrz

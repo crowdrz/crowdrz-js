@@ -1,15 +1,20 @@
-import FB from 'fb'
+const FB = require('fb')
 
 //const FB = require('fb').default
 
-const _checkParams = (request: any) => {
+export interface facebookServiceInterface {
+  _checkParams?(): boolean
+  getData(request: any, _accumulator?: Array<any>, totalLimit?: number): Promise<any>
+}
+
+const _checkParams = (request: any): boolean => {
   if (!(request.apiToken && request.method && request.endpoint && request.apiVersion)) {
     return false
   }
   return true
 }
 
-const getData = async (request, _accumulator = [], totalLimit = null) => {
+export const getData = async (request: any, _accumulator: Array<any> = [], totalLimit: number = -1): Promise<any> => {
   // Check param validity
   if (!_checkParams(request)) {
     throw new Error('Api Token, Method and endpoint are required')
@@ -19,12 +24,12 @@ const getData = async (request, _accumulator = [], totalLimit = null) => {
   FB.options({version: `v${request.apiVersion}`})
 
   // If params.limit is set, prepare recursive data
-  if (!totalLimit && request.params.limit) {
+  if (totalLimit === -1 && request.params.limit) {
     totalLimit = request.params.limit
     request.params.limit = 100
   }
 
-  let apiRes = null
+  let apiRes: any = null
   // Call facebook SDK
   apiRes = await FB.api(request.endpoint, request.method, request.params)
 
@@ -50,9 +55,3 @@ const getData = async (request, _accumulator = [], totalLimit = null) => {
     return apiRes
   }
 }
-
-export {getData}
-
-// module.exports = {
-//   getData
-// }

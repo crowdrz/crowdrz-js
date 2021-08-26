@@ -1,9 +1,11 @@
-import {getData} from './facebook'
+import {getData, facebookServiceInterface} from './facebook'
 
-const servicesList = {
+export interface servicesListInterface {
+  facebook: facebookServiceInterface
+}
+
+export const servicesList: servicesListInterface = {
   facebook: {
     getData
   }
 }
-
-export {servicesList}
