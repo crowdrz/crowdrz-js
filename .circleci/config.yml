@@ -35,5 +35,5 @@ jobs:
 
       # run tests!
       - run: npm install
-      - run: tsc
+      - run: npm run build
       - run: npm test
