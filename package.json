@@ -1,19 +1,21 @@
 {
   "name": "@crowdrz/crowdrz-js",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Simplified wrapper for Social API",
   "repository": "crowdrz/crowdrz-js",
-  "main": "./lib/crowdrz.js",
+  "main": "lib/crowdrz.js",
+  "types": "lib/crowdrz.d.ts",
   "scripts": {
     "demo": "node demo/demo.js",
     "test": "mocha test/**/*.js",
     "clean": "rm -r dist",
-    "build": "webpack --mode production"
+    "build": "tsc"
   },
   "author": "Antonin Bouscarel <antonin.bouscarel.pro@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@types/fb": "0.0.28",
     "@types/node": "^12.20.20",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.4",
@@ -22,7 +24,10 @@
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.1",
     "sinon": "^7.5.0",
-    "webpack": "^4.44.1",
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^8.2.0",
+    "typescript": "^4.3.5",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
