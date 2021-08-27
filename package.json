@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "async": "^3.2.1",
-    "fb": "^2.0.0"
+    "fb": "^2.0.0",
+    "request": "^2.88.2"
   },
   "husky": {
     "hooks": {

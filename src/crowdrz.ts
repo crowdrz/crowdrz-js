@@ -98,7 +98,7 @@ export class Crowdrz implements CrowdrzInterface {
   }
 
   // Core
-  async call(method: string, endpoint: string, params: object): Promise<any> {
+  async call(method: string, endpoint: string, params: object = {}): Promise<any> {
     params = JSON.parse(JSON.stringify(params)) // Clone given object to avoid reference being updated during crowdrz call
 
     let data: any = null
