@@ -3,7 +3,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const {Crowdrz} = require('../../dist/crowdrz')
+const {Crowdrz} = require('../../lib/crowdrz')
 
 describe('Crowdrz Core', () => {
   it('should be init', () => {
