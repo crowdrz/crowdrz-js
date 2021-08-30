@@ -1,5 +1,5 @@
-import {facebookServiceInterface} from './facebook'
-import {crowdtangleServiceInterface} from './crowdtangle'
+import {facebookServiceInterface} from './facebook/index'
+import {crowdtangleServiceInterface} from './crowdtangle/index'
 export interface servicesListInterface {
   facebook: facebookServiceInterface
   crowdtangle: crowdtangleServiceInterface

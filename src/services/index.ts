@@ -1,5 +1,5 @@
-import {getData as facebookGetData, facebookServiceInterface} from './facebook'
-import {getData as crowdtangleGetData, crowdtangleServiceInterface} from './crowdtangle'
+import {getData as facebookGetData, facebookServiceInterface} from './facebook/index'
+import {getData as crowdtangleGetData, crowdtangleServiceInterface} from './crowdtangle/index'
 
 export interface servicesListInterface {
   facebook: facebookServiceInterface
