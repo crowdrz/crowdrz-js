@@ -40,32 +40,34 @@ export const getData = async (requestParams: any, _accumulator: Array<any> = [],
     qs: requestParams.params
   }
 
-  // if (totalLimit === -1 && requestParams.params.count) {
-  //   totalLimit = requestParams.params.count
-  //   requestParams.params.count = 100
-  // }
+  if (totalLimit === -1 && requestParams.params.count) {
+    totalLimit = requestParams.params.count
+    requestParams.params.count = 100
+    requestParams.params.offset = 0
+  }
 
   let apiRes: any = null
   apiRes = await callApi(requestOptions)
 
-  return apiRes[Object.keys(apiRes)[0]]
+  //return apiRes[Object.keys(apiRes)[0]]
 
-  // if (totalLimit && apiRes.pagination && apiRes.pagination.nextPage) {
-  //   _accumulator = _accumulator.concat(apiRes[Object.keys(apiRes)[0]])
-  //   if (totalLimit > 0 && _accumulator.length >= totalLimit) {
-  //     return _accumulator.splice(0, totalLimit)
-  //     // If no limit, send all data after last page.
-  //   } else if (totalLimit === -1 && !apiRes.pagination.nextPage) {
-  //     return _accumulator
-  //   }
-  //   return getData(requestParams, _accumulator, totalLimit)
-  // } else {
-  //   if (apiRes[Object.keys(apiRes)[0]]) {
-  //     _accumulator = _accumulator.concat(apiRes[Object.keys(apiRes)[0]])
-  //     return _accumulator
-  //   }
-  //   return apiRes
-  // }
+  if (totalLimit && apiRes.pagination && apiRes.pagination.nextPage) {
+    _accumulator = _accumulator.concat(apiRes[Object.keys(apiRes)[0]])
+    if (totalLimit > 0 && _accumulator.length >= totalLimit) {
+      return _accumulator.splice(0, totalLimit)
+      // If no limit, send all data after last page.
+    } else if (totalLimit === -1 && !apiRes.pagination.nextPage) {
+      return _accumulator
+    }
+    requestParams.params.offset += requestParams.params.count
+    return getData(requestParams, _accumulator, totalLimit)
+  } else {
+    if (apiRes[Object.keys(apiRes)[0]]) {
+      _accumulator = _accumulator.concat(apiRes[Object.keys(apiRes)[0]])
+      return _accumulator
+    }
+    return apiRes
+  }
   // console.log(apiRes)
   //console.log(apiRes)
 }
