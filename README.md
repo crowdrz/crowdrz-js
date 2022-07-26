@@ -73,6 +73,7 @@ const Crowdrz = require('@crowdrz/crowdrz-js')
 const apiToken = '<api key>'
 
 const facebook = new Crowdrz('facebook')
+
 facebook.setToken(apiToken)
 const me = await facebook.call('GET', '/me')
 const me2 = await facebook
