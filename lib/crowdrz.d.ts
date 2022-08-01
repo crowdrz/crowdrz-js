@@ -39,7 +39,7 @@ export declare class Crowdrz implements CrowdrzInterface {
   setMethod(method: string): Crowdrz
   setEndpoint(endpoint: string): Crowdrz
   setParams(params: object): Crowdrz
-  call(method: string, endpoint: string, params: object): Promise<any>
+  call(method: string, endpoint: string, params?: object): Promise<any>
   get(endpoint: string, params: object): Promise<any>
   post(endpoint: string, params: object): Promise<any>
   put(endpoint: string, params: object): Promise<any>

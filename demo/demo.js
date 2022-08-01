@@ -1,4 +1,4 @@
-const Crowdrz = require('../built/crowdrz')
+const {Crowdrz} = require('../lib/crowdrz')
 
 const apiKey = '<api key>'
 
@@ -14,4 +14,13 @@ const getMeDemo = async () => {
   console.log(me, me2, me3)
 }
 
+const getCtListDemo = async () => {
+  const ct = new Crowdrz('crowdtangle')
+  ct.setToken(apiKey)
+  ct.setDebug(true)
+  const list = await ct.call('GET', '/posts')
+  console.log('list', list)
+}
+
 getMeDemo()
+getCtListDemo()
